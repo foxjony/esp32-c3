@@ -2,7 +2,7 @@
 ### ESP32-C3 SuperMini Board
 ### Test Led, Button and UART 1, 2, 3.
 
-- 
+```
 === Board GPIO ===
 	X1:
 	1 - GPIO5 / ADC2 / SCL / SPI_MISO
@@ -42,6 +42,6 @@
 	4. Unpress Button [Boot].
 	5. PlatformIO: Select COM Port.
 	6. PlatformIO: Upload.
-
+```
 RAM:   [          ]   4.2% (used 13884 bytes from 327680 bytes)
 Flash: [==        ]  19.6% (used 256486 bytes from 1310720 bytes)
