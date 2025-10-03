@@ -43,7 +43,7 @@
 	6. PlatformIO: Upload.
 
 RAM:   [          ]   4.2% (used 13884 bytes from 327680 bytes)
-Flash: [==        ]  19.6% (used 256486 bytes from 1310720 bytes)
+Flash: [==        ]  19.6% (used 256590 bytes from 1310720 bytes)
 */
 
 #include <WiFi.h>
@@ -138,4 +138,5 @@ void loop() {
 	if (tim >= 1000) {test_Tim();} else {tim++; delay(1);}
 	test_Uart();
 }
+
 
