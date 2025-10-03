@@ -20,8 +20,8 @@
 	5 - GPIO4 / ADC1 / SDA / SPI_SCK
 	4 - GPIO3
 	3 - GPIO2 - R10k - 3.3V
-	2 - GPIO1 / U1RXD (Serial1 - No Work)
-	1 - GPIO0 / U1TXD (Serial1 - No Work)
+	2 - GPIO1 / U1RXD (Serial1)
+	1 - GPIO0 / U1TXD (Serial1)
   
 	GPIO8  - LED (Blue) - R5k1 - 3.3V
 	GPIO9  - Button PROG (BOOT) - GND
@@ -67,6 +67,8 @@ void led_Flash(uint16_t t1, uint16_t t2, uint16_t n) {
 void test_Button() {
 	while (!digitalRead(BTN)) {
 		Serial.println("BTN USB");
+		Serial0.println("BTN UART0");
+		Serial1.println("BTN UART1");
 		led_Flash(10, 100, 1);
 	}
 	tik = 0;
@@ -90,6 +92,7 @@ void test_Uart() {
 		m = Serial.readBytesUntil('\n', data, sizeof (data)-1);
 		data[m] = '\0';
 		Serial.println(data);		// Send Eho
+		led_Flash(10, 10, 1);
 	}
 
 	// UART0
@@ -97,6 +100,7 @@ void test_Uart() {
 		m = Serial0.readBytesUntil('\n', data, sizeof (data)-1);
 		data[m] = '\0';
 		Serial0.println(data);		// Send Eho
+		led_Flash(10, 10, 1);
 	}
 
 	// UART1
@@ -104,6 +108,7 @@ void test_Uart() {
 		m = Serial1.readBytesUntil('\n', data, sizeof (data)-1);
 		data[m] = '\0';
 		Serial1.println(data);		// Send Eho
+		led_Flash(10, 10, 1);
 	}
 }
 
@@ -133,3 +138,4 @@ void loop() {
 	if (tim >= 1000) {test_Tim();} else {tim++; delay(1);}
 	test_Uart();
 }
+
