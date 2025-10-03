@@ -20,8 +20,8 @@
 	5 - GPIO4 / ADC1 / SDA / SPI_SCK
 	4 - GPIO3
 	3 - GPIO2 - R10k - 3.3V
-	2 - GPIO1 / U1RXD (Serial1 - No Work)
-	1 - GPIO0 / U1TXD (Serial1 - No Work)
+	2 - GPIO1 / U1RXD (Serial1)
+	1 - GPIO0 / U1TXD (Serial1)
   
 	GPIO8  - LED (Blue) - R5k1 - 3.3V
 	GPIO9  - Button PROG (BOOT) - GND
